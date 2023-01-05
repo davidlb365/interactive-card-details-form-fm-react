@@ -57,7 +57,7 @@ function Formulario({name, setName, number, setNumber, month, setMonth, year, se
             setErrorMonth("Too short")
             return
         }
-        (parseInt(month) < 1 || parseInt(month) > 12) ? setErrorMonth("Wrong format") : setErrorMonth('')
+        (isNaN(month) || parseInt(month) < 1 || parseInt(month) > 12) ? setErrorMonth("Wrong format") : setErrorMonth('')
     }
 
     function checkYear() {
@@ -69,7 +69,7 @@ function Formulario({name, setName, number, setNumber, month, setMonth, year, se
             setErrorYear("Too short")
             return
         }
-        (parseInt(year) < 1) ? setErrorYear("Wrong format") : setErrorYear('')
+        (isNaN(year) || parseInt(year) < 1) ? setErrorYear("Wrong format") : setErrorYear('')
     }
 
     function checkCvc() {
@@ -77,7 +77,7 @@ function Formulario({name, setName, number, setNumber, month, setMonth, year, se
             setErrorCvc("Can't be blank")
             return
         }
-        (cvc.length < 3) ? setErrorCvc("Too short") : setErrorCvc('')
+        (isNaN(cvc) || cvc.length < 3) ? setErrorCvc("Too short") : setErrorCvc('')
     }
 
     return (
