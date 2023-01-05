@@ -77,7 +77,12 @@ function Formulario({name, setName, number, setNumber, month, setMonth, year, se
             setErrorCvc("Can't be blank")
             return
         }
-        (isNaN(cvc) || cvc.length < 3) ? setErrorCvc("Too short") : setErrorCvc('')
+        if(cvc.length < 3) {
+            setErrorCvc("Too short")
+            return
+        }
+        isNaN(cvc) ? setErrorCvc("Wrong format") : setErrorCvc('')
+
     }
 
     return (
