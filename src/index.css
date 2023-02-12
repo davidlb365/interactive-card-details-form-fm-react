@@ -287,7 +287,9 @@ main {
     }
 
     .form {
-        all: unset;
+        position: unset;
+        transform: unset;
+        /* all: unset; */
         display: block;
         width: 21rem;
         margin-inline: auto;
