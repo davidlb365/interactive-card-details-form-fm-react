@@ -92,12 +92,12 @@ function Formulario({name, setName, number, setNumber, month, setMonth, year, se
             ) : (
                 <form className="form" id="submit" onSubmit={handleSubmit}>
                     <div className="form__container">
-                        <label htmlFor="name" className="form__label">CARDHOLDER NAME</label>
+                        <label htmlFor="name" className="form__label">Cardholder Name</label>
                         <input type="text" id="form-name" placeholder="e.g. Jane Appleseed" className={`${errorName && errorName !== 'i' && 'redInput'} input__card`} value={name} onChange={ (e) => setName(e.target.value)}/>
                         {errorName && errorName !== 'i' && <Error msg={errorName} />}
                     </div>
                     <div className="form__container">
-                        <label htmlFor="number" className="form__label">CARD NUMBER</label>
+                        <label htmlFor="number" className="form__label">Card Number</label>
                         <input type="text" id="form-number" placeholder="e.g. 1234 5678 9123 0000" className={`${errorNumber && errorNumber !== 'i' && 'redInput'} input__card`} maxLength="19" value={number} onChange={changeNumber}/>
                         {errorNumber && errorNumber !== 'i' && <Error msg={errorNumber} />}
                     </div>
