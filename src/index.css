@@ -20,8 +20,6 @@ main {
 
 .background {
     background-image: url('./assets/images/bg-main-desktop.png');
-    background-image: -webkit-image-set(
-        url('./assets/images/bg-main-desktop.webp') 1x);
 }
 
 .content {
@@ -238,8 +236,6 @@ main {
 
     .background {
         background-image: url('./assets/images/bg-main-mobile.png');
-        background-image: -webkit-image-set(
-            url('./assets/images/bg-main-mobile.webp') 1x);  
         background-size: cover;
         height: 14rem;
     }

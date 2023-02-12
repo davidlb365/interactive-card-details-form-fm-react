@@ -5,6 +5,7 @@ import cardFrontWebp from "../assets/images/bg-card-front.webp"
 import cardBack from "../assets/images/bg-card-back.png"
 import cardBackAvif from "../assets/images/bg-card-back.avif"
 import cardBackWebp from "../assets/images/bg-card-back.webp"
+
 import cardLogo from "../assets/images/card-logo.svg"
 
 function Cards({name, number, month, year, cvc}) {
@@ -16,7 +17,6 @@ function Cards({name, number, month, year, cvc}) {
                     <source srcSet={cardFrontWebp} type="image/webp" />
                     <img src={cardFront} alt="image card front" className="card__image" width={447} height={245} />
                 </picture>
-                {/* <img src={cardFront} alt="front card" className="card__image" /> */}
                 <img src={cardLogo} alt="card logo" className="card__logo" width={84} height={47} />
                 <p className="card__number" id="card-number">{number || '0000 0000 0000 0000'}</p>
                 <p className="card__name" id="card-name">{name.toUpperCase() || 'JANE APPLESEED'}</p>
@@ -26,11 +26,10 @@ function Cards({name, number, month, year, cvc}) {
             </div>
             <div className="card">
                 <picture>
-                    <source srcSet={cardBackAvif} type="image/avif" />
-                    <source srcSet={cardBackWebp} type="image/webp" />
-                    <img src={cardBack} alt="image card back" className="card__image" width={447} height={245} />
+                   <source srcSet={cardBackAvif} type="image/avif" />
+                   <source srcSet={cardBackWebp} type="image/webp" />
+                   <img src={cardBack} alt="image card back" className="card__image" width={447} height={245} />
                 </picture>
-                {/* <img src={cardBack} alt="back card" className="card__image" /> */}
                 <p className="card__cvc" id="card-cvc">{cvc || '000'}</p>
             </div>
         </div>
