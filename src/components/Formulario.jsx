@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Error from './Error'
-import iconComplete from "../assets/images/icon-complete.svg"
+import Success from './Success'
 
 function Formulario({name, setName, number, setNumber, month, setMonth, year, setYear, cvc, setCvc}) {
     const [errorName, setErrorName] = useState('i')
@@ -88,12 +88,7 @@ function Formulario({name, setName, number, setNumber, month, setMonth, year, se
     return (
         <div className="content" id="content">
             {([errorName, errorNumber, errorMonth, errorYear, errorCvc].every(elem => elem === '')) ? (
-                <div class="form success">
-                    <img src={iconComplete} alt="icon complete" class="success__image" />
-                    <h3 class="success__title">Thank you!</h3>
-                    <p class="success__text">We've added your card details</p>
-                    <input type="submit" class="form__submit" value="Continue" />
-                </div>
+                <Success />
             ) : (
                 <form className="form" id="submit" onSubmit={handleSubmit}>
                     <div className="form__container">
